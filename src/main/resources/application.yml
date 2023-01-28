@@ -1,0 +1,17 @@
+server:
+  port: 5010
+
+cloud:
+  aws:
+    stack:
+      auto: false
+
+  ################ Liquibase ####################
+liquibase:
+  datasource:
+    template-db.changelog: classpath:migrations/prod/db.changelog-master.xml
+
+bazaar:
+  datasource:
+    template-db:
+      maximum-pool-size: 25
